@@ -129,7 +129,7 @@ for itrCounter=0:MaxIt
     swarm2pic(rep);
     if mod(itrCounter,window) == 0 && dynamic == 1
         particle = initialSwarm(particle,numOfSwarm,0.3);
-        [particle,rep] = reevalute(particle,rep);
+        [particle,rep] = reevalute(particle,rep); % This file is missed. Maybe u should add this function
         rep=DetermineDomination(rep);
         rep=GetNonDominatedParticles(rep);
     end
